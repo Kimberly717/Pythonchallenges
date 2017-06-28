@@ -1,0 +1,22 @@
+# Challenge 30- Python
+#
+# prompt user for name and age
+# check if person is right age to go on holiday
+#
+# Kimberly Smith
+#
+
+name = input ("What is your name?")
+while not name:
+    name = input("What is your name?")
+else:
+    age = input("Hello, {}. What is your age?".format(name))
+    while not age:
+        age = input("Hello, {}. What is your age?".format(name))
+    else:
+        int_age = int(age)
+        print("{0}, you are {1} years old!".format(name, int_age))
+if (int_age >= 18) and (int_age < 31):
+        print("You are in the right age group to go on a special holiday!")
+else:
+        print("Sorry, you are not eligible to go on this holiday")
