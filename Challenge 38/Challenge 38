@@ -1,0 +1,33 @@
+# Challenge 38
+#
+# Python Masterclass
+#
+# Kimberly Smith
+
+
+
+import random
+number =''
+guesses = 0
+answer = random.randint(1,10)
+number_range = ['0','1','2','3','4','5','6','7','8','9']
+
+number = (input('Please enter a number from 1 to 10 or enter zero to quit:'))
+while number not in number_range:
+    number = input("You entered invalid characters, Please enter a number from"
+                       " 1 to 10 or enter 0 to quit:")
+else:
+    number = int(number)
+    while number != answer:
+        if number == 0:
+            print('You have exited the program')
+            break
+        if number < answer:
+            number = int(input('Please guess higher:'))
+            guesses += 1
+        if number > answer:
+            number = int(input('Please guess lower:'))
+            guesses += 1
+        if number == answer:
+            guesses += 1
+            print("You guessed the correct number in {} tries!".format(guesses))
